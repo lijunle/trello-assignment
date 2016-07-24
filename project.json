@@ -1,0 +1,31 @@
+{
+  "name": "Trello-Assignment",
+  "version": "0.1.0-*",
+  "buildOptions": {
+    "debugType": "portable",
+    "emitEntryPoint": true
+  },
+  "dependencies": {},
+  "tools": {
+    "Microsoft.DotNet.Watcher.Tools": {
+      "version": "1.0.0-*",
+      "imports": [
+        "portable-net451+win8"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.0"
+        },
+        "Microsoft.AspNetCore.Diagnostics": "1.0.0",
+        "Microsoft.AspNetCore.Routing": "1.0.0",
+        "Microsoft.AspNetCore.Server.Kestrel": "1.0.0"
+      },
+      "imports": "dnxcore50"
+    }
+  }
+}
