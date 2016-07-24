@@ -1,5 +1,6 @@
 {
-  "version": "1.0.0-*",
+  "name": "Trello-Assignment",
+  "version": "0.1.0",
   "buildOptions": {
     "emitEntryPoint": true,
     "compilerName": "fsc",
@@ -20,6 +21,12 @@
         "dnxcore50",
         "portable-net45+win81",
         "netstandard1.3"
+      ]
+    },
+    "Microsoft.DotNet.Watcher.Tools": {
+      "version": "1.0.0-*",
+      "imports": [
+        "portable-net451+win8"
       ]
     }
   },
