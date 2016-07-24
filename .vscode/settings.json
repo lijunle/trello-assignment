@@ -1,5 +1,8 @@
 // Place your settings in this file to overwrite default and user settings.
 {
+  // The number of spaces a tab is equal to.
+  "editor.tabSize": 4,
+
   // Remove trailing auto inserted whitespace
   "editor.trimAutoWhitespace": true,
 
