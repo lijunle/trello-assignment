@@ -1,9 +1,20 @@
-// Learn more about F# at http://fsharp.org
+module Program
 
 open System
+open Microsoft.AspNetCore.Builder
+open Microsoft.AspNetCore.Hosting
+open Microsoft.AspNetCore.Http
+
+type Startup() =
+    member __.Configure(app : IApplicationBuilder) =
+        app.Run (fun context -> context.Response.WriteAsync("Hello World"))
 
 [<EntryPoint>]
 let main argv =
-    printfn "Hello World!"
-    printfn "%A" argv
+    WebHostBuilder()
+        .UseKestrel()
+        .UseStartup<Startup>()
+        .Build()
+        .Run()
+
     0 // return an integer exit code
