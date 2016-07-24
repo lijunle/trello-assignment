@@ -1,8 +1,25 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Trello Assignment</title>
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            var id = $('#id').val();
+            $.post('/assign/' + id).then(function (data) {
+                $('#result').text(data);
+            });
+        }
+    </script>
 </head>
 <body>
     <div>Try to Assign</div>
+    <form onsubmit="submitForm(event)">
+        <input id="id" />
+        <button>Submit</button>
+    </form>
+    <div id="result"></div>
 </body>
 </html>
